@@ -1,0 +1,99 @@
+{
+    "data": {
+        "handler": "ilsvrc_dataset",
+        "batch_size": 512,
+        "train_filelist": "/grand/projects/ALCFAITP/ilsvrc_train_filelist.txt",
+        "test_filelist": "/grand/projects/ALCFAITP/ilsvrc_val_filelist.txt",
+        "shuffle_buffer": 200000,
+        "reshuffle_each_iteration": true,
+        "num_parallel_readers": 128,
+        "prefetch_buffer_size": 8,
+        "crop_image_size": [
+            256,
+            256
+        ],
+        "num_classes": 1000,
+        "num_channels": 3
+    }
+}
+num labels: 1000
+build dataset /grand/projects/ALCFAITP/ilsvrc_train_filelist.txt
+[[36m2022-11-16 23:48:34,016[0m][[34mai4sci.ilsvrc_dataset[0m][[32mINFO[0m] - input filelist contains 1281167 files, estimated batches per rank 2502[0m
+build dataset /grand/projects/ALCFAITP/ilsvrc_val_filelist.txt
+[[36m2022-11-16 23:48:36,355[0m][[34mai4sci.ilsvrc_dataset[0m][[32mINFO[0m] - input filelist contains 50000 files, estimated batches per rank 97[0m
+thetagpu06:2529685:2530082 [0] NCCL INFO Bootstrap : Using enp226s0:10.230.2.194<0>
+thetagpu06:2529685:2530082 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+thetagpu06:2529685:2530082 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [2]mlx5_2:1/IB [3]mlx5_3:1/IB [4]mlx5_4:1/IB [5]mlx5_5:1/RoCE [6]mlx5_6:1/IB [7]mlx5_7:1/IB [8]mlx5_8:1/IB [9]mlx5_9:1/IB [10]mlx5_10:1/IB [11]mlx5_11:1/RoCE [RO]; OOB enp226s0:10.230.2.194<0>
+thetagpu06:2529685:2530082 [0] NCCL INFO Using network IB
+NCCL version 2.12.12+cuda11.0
+thetagpu06:2529685:2530082 [0] NCCL INFO Setting affinity for GPU 0 to 010000,00000000,00000000,00000000,00010000,00000000
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 00/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 01/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 02/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 03/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 04/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 05/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 06/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 07/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 08/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 09/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 10/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 11/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 12/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 13/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 14/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 15/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 16/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 17/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 18/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 19/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 20/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 21/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 22/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 23/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 24/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 25/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 26/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 27/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 28/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 29/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 30/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Channel 31/32 :    0
+thetagpu06:2529685:2530082 [0] NCCL INFO Trees [0] -1/-1/-1->0->-1 [1] -1/-1/-1->0->-1 [2] -1/-1/-1->0->-1 [3] -1/-1/-1->0->-1 [4] -1/-1/-1->0->-1 [5] -1/-1/-1->0->-1 [6] -1/-1/-1->0->-1 [7] -1/-1/-1->0->-1 [8] -1/-1/-1->0->-1 [9] -1/-1/-1->0->-1 [10] -1/-1/-1->0->-1 [11] -1/-1/-1->0->-1 [12] -1/-1/-1->0->-1 [13] -1/-1/-1->0->-1 [14] -1/-1/-1->0->-1 [15] -1/-1/-1->0->-1 [16] -1/-1/-1->0->-1 [17] -1/-1/-1->0->-1 [18] -1/-1/-1->0->-1 [19] -1/-1/-1->0->-1 [20] -1/-1/-1->0->-1 [21] -1/-1/-1->0->-1 [22] -1/-1/-1->0->-1 [23] -1/-1/-1->0->-1 [24] -1/-1/-1->0->-1 [25] -1/-1/-1->0->-1 [26] -1/-1/-1->0->-1 [27] -1/-1/-1->0->-1 [28] -1/-1/-1->0->-1 [29] -1/-1/-1->0->-1 [30] -1/-1/-1->0->-1 [31] -1/-1/-1->0->-1
+thetagpu06:2529685:2530082 [0] NCCL INFO Connected all rings
+thetagpu06:2529685:2530082 [0] NCCL INFO Connected all trees
+thetagpu06:2529685:2530082 [0] NCCL INFO 32 coll channels, 32 p2p channels, 32 p2p channels per peer
+thetagpu06:2529685:2530082 [0] NCCL INFO comm 0x7f5916fff6d0 rank 0 nranks 1 cudaDev 0 busId 7000 - Init COMPLETE
+[[36m2022-11-16 23:49:16,399[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 0 / 1281167 (0%)] epoch=0.0000 dt=37.1076 running_loss=0.0000 batch_loss=0.0147 acc=0.0000 batch_acc=0.0039[0m
+[[36m2022-11-16 23:49:32,539[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 5120 / 1281167 (0%)] epoch=0.0000 dt=0.8258 running_loss=0.0000 batch_loss=0.0099 acc=0.0001 batch_acc=0.0254[0m
+[[36m2022-11-16 23:49:53,168[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 10240 / 1281167 (1%)] epoch=0.0000 dt=0.7401 running_loss=0.0001 batch_loss=0.0095 acc=0.0002 batch_acc=0.0410[0m
+[[36m2022-11-16 23:50:17,980[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 15360 / 1281167 (1%)] epoch=0.0000 dt=0.6299 running_loss=0.0001 batch_loss=0.0092 acc=0.0003 batch_acc=0.0312[0m
+[[36m2022-11-16 23:50:42,991[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 20480 / 1281167 (2%)] epoch=0.0000 dt=0.7282 running_loss=0.0002 batch_loss=0.0091 acc=0.0005 batch_acc=0.0723[0m
+[[36m2022-11-16 23:51:07,933[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 25600 / 1281167 (2%)] epoch=0.0000 dt=0.7670 running_loss=0.0002 batch_loss=0.0093 acc=0.0007 batch_acc=0.0410[0m
+[[36m2022-11-16 23:51:31,363[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 30720 / 1281167 (2%)] epoch=0.0000 dt=0.6398 running_loss=0.0002 batch_loss=0.0090 acc=0.0010 batch_acc=0.0742[0m
+[[36m2022-11-16 23:51:55,182[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 35840 / 1281167 (3%)] epoch=0.0000 dt=0.6852 running_loss=0.0003 batch_loss=0.0089 acc=0.0013 batch_acc=0.0684[0m
+[[36m2022-11-16 23:52:19,631[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 40960 / 1281167 (3%)] epoch=0.0000 dt=0.7626 running_loss=0.0003 batch_loss=0.0087 acc=0.0015 batch_acc=0.0742[0m
+[[36m2022-11-16 23:52:43,515[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 46080 / 1281167 (4%)] epoch=0.0000 dt=0.9221 running_loss=0.0003 batch_loss=0.0088 acc=0.0018 batch_acc=0.0527[0m
+[[36m2022-11-16 23:53:07,530[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 51200 / 1281167 (4%)] epoch=0.0000 dt=0.7678 running_loss=0.0004 batch_loss=0.0087 acc=0.0021 batch_acc=0.0625[0m
+[[36m2022-11-16 23:53:33,139[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 56320 / 1281167 (4%)] epoch=0.0000 dt=0.7648 running_loss=0.0004 batch_loss=0.0086 acc=0.0025 batch_acc=0.0879[0m
+[[36m2022-11-16 23:53:56,214[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 61440 / 1281167 (5%)] epoch=0.0000 dt=0.6579 running_loss=0.0004 batch_loss=0.0087 acc=0.0028 batch_acc=0.0703[0m
+[[36m2022-11-16 23:54:23,493[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 66560 / 1281167 (5%)] epoch=0.0000 dt=1.1411 running_loss=0.0005 batch_loss=0.0088 acc=0.0032 batch_acc=0.0938[0m
+[[36m2022-11-16 23:54:48,008[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 71680 / 1281167 (6%)] epoch=0.0000 dt=0.7265 running_loss=0.0005 batch_loss=0.0088 acc=0.0036 batch_acc=0.0840[0m
+[[36m2022-11-16 23:55:12,113[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 76800 / 1281167 (6%)] epoch=0.0000 dt=0.8648 running_loss=0.0005 batch_loss=0.0083 acc=0.0040 batch_acc=0.0703[0m
+[[36m2022-11-16 23:55:44,242[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 81920 / 1281167 (6%)] epoch=0.0000 dt=0.7202 running_loss=0.0006 batch_loss=0.0084 acc=0.0044 batch_acc=0.1152[0m
+[[36m2022-11-16 23:56:08,160[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 87040 / 1281167 (7%)] epoch=0.0000 dt=0.9525 running_loss=0.0006 batch_loss=0.0084 acc=0.0049 batch_acc=0.1152[0m
+[[36m2022-11-16 23:56:32,561[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 92160 / 1281167 (7%)] epoch=0.0000 dt=0.6588 running_loss=0.0006 batch_loss=0.0084 acc=0.0054 batch_acc=0.1094[0m
+[[36m2022-11-16 23:56:57,474[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 97280 / 1281167 (8%)] epoch=0.0000 dt=0.7330 running_loss=0.0007 batch_loss=0.0079 acc=0.0059 batch_acc=0.1309[0m
+[[36m2022-11-16 23:57:21,243[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 102400 / 1281167 (8%)] epoch=0.0000 dt=0.8224 running_loss=0.0007 batch_loss=0.0079 acc=0.0064 batch_acc=0.1348[0m
+[[36m2022-11-16 23:57:45,124[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 107520 / 1281167 (8%)] epoch=0.0000 dt=0.6741 running_loss=0.0007 batch_loss=0.0081 acc=0.0069 batch_acc=0.1309[0m
+[[36m2022-11-16 23:58:08,304[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 112640 / 1281167 (9%)] epoch=0.0000 dt=0.6244 running_loss=0.0008 batch_loss=0.0084 acc=0.0074 batch_acc=0.0977[0m
+[[36m2022-11-16 23:58:40,814[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 117760 / 1281167 (9%)] epoch=0.0000 dt=0.7810 running_loss=0.0008 batch_loss=0.0082 acc=0.0079 batch_acc=0.1289[0m
+[[36m2022-11-16 23:59:04,227[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 122880 / 1281167 (10%)] epoch=0.0000 dt=0.7200 running_loss=0.0008 batch_loss=0.0083 acc=0.0084 batch_acc=0.1191[0m
+[[36m2022-11-16 23:59:29,485[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 128000 / 1281167 (10%)] epoch=0.0000 dt=0.7080 running_loss=0.0009 batch_loss=0.0083 acc=0.0090 batch_acc=0.1328[0m
+[[36m2022-11-16 23:59:53,976[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 133120 / 1281167 (10%)] epoch=0.0000 dt=0.7176 running_loss=0.0009 batch_loss=0.0079 acc=0.0096 batch_acc=0.1621[0m
+[[36m2022-11-17 00:00:17,620[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 138240 / 1281167 (11%)] epoch=0.0000 dt=0.9050 running_loss=0.0009 batch_loss=0.0081 acc=0.0101 batch_acc=0.1152[0m
+[[36m2022-11-17 00:00:40,811[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 143360 / 1281167 (11%)] epoch=0.0000 dt=0.6337 running_loss=0.0010 batch_loss=0.0081 acc=0.0107 batch_acc=0.1641[0m
+[[36m2022-11-17 00:01:05,716[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 148480 / 1281167 (12%)] epoch=0.0000 dt=0.6911 running_loss=0.0010 batch_loss=0.0078 acc=0.0113 batch_acc=0.1504[0m
+[[36m2022-11-17 00:01:32,062[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 153600 / 1281167 (12%)] epoch=0.0000 dt=0.8647 running_loss=0.0010 batch_loss=0.0078 acc=0.0120 batch_acc=0.1582[0m
+[[36m2022-11-17 00:02:04,702[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 158720 / 1281167 (12%)] epoch=0.0000 dt=0.7302 running_loss=0.0011 batch_loss=0.0079 acc=0.0126 batch_acc=0.1738[0m
+[[36m2022-11-17 00:02:28,711[0m][[34mai4sci.trainer[0m][[32mINFO[0m] - [0] [0/1: 163840 / 1281167 (13%)] epoch=0.0000 dt=0.8300 running_loss=0.0011 batch_loss=0.0081 acc=0.0132 batch_acc=0.1699[0m
